@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "qiankun-sub1",
+  name: "vueApp",
   components: {},
 };
 </script>

@@ -12,7 +12,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: "history",
-  base: "",
+  base: window.__POWERED_BY_QIANKUN__ ? '/vueApp/' : '/child/vue-app/',
   routes
 })
 

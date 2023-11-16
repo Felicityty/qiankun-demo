@@ -1,6 +1,13 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/user">User</router-link> |
+      <router-link to="/appVue">goToSubVue</router-link>
+    </div>
+    <router-view />
+    <div id="container"></div>
+    <!-- <router-view></router-view> -->
   </div>
 </template>
 
