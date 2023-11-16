@@ -4,11 +4,10 @@
 // })
 
 module.exports = {
-  lintOnSave: false, // 关闭eslint检测
+  lintOnSave: false,
   devServer: {
-    port: 3000, //这里的端口是必须和父应用配置的子应用端口一致
+    port: 3000,
     headers: {
-      //因为qiankun内部请求都是fetch来请求资源，所以子应用必须允许跨域
       "Access-Control-Allow-Origin": "*",
     },
   }
