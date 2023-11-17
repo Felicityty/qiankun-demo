@@ -3,7 +3,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import App from "./App.vue";
 import routes from "./router";
-import store from './store'
+import store from './store';
+import action from './qiankun/action';
 
 Vue.config.productionTip = false;
 
@@ -45,6 +46,7 @@ export async function bootstrap() {
 }
 export async function mount(props) {
   console.log("[vue] props from main framework", props);
+  action.setActions(props);
   render(props);
 }
 export async function unmount() {

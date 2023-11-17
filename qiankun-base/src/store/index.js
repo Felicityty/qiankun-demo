@@ -12,6 +12,9 @@ const mutations = {
   updateName(state, newData) {
     state.name = newData;
   },
+  updateNum(state, newData) {
+    state.name = newData;
+  },
 }
 
 export default new Vuex.Store({

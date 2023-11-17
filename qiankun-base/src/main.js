@@ -7,7 +7,7 @@ import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 Vue.use(ElementUI);
 
-import { registerMicroApps, start } from "qiankun";
+import { registerMicroApps, start, initGlobalState } from "qiankun";
 registerMicroApps([
   {
     name: "vue1",
@@ -23,6 +23,15 @@ registerMicroApps([
   },
 ]);
 start();
+
+const state = {
+  abc: 456
+}
+
+const actions = initGlobalState(state);
+actions.onGlobalStateChange((state, prev) => {
+  console.log(state, prev);
+});
 
 Vue.config.productionTip = false
 
